@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal and External JavaScript Example</title>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Demo</h1>
+
+    <button onclick="internalFunction()">Click Me (Internal JS)</button>
+    <br><br>
+    <button onclick="externalFunction()">Click Me (External JS)</button>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function internalFunction() {
+            alert("Hello from INTERNAL JavaScript!");
+        }
+    </script>
+
+</body>
+</html>

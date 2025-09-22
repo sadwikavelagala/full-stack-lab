@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voter Eligibility Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        th, td {
+            border: 1px solid #555;
+            padding: 12px;
+            font-size: 18px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .eligible {
+            color: green;
+            font-weight: bold;
+        }
+        .not-eligible {
+            color: red;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Voter Eligibility Checker</h1>
+    <button onclick="getVoterDetails()">Check Eligibility</button>
+
+    <div id="voterInfo"></div>
+
+    <script>
+        function getVoterDetails() {
+            let name = prompt("Enter your name:");
+            if (!name || name.trim() === "") {
+                alert("Name cannot be empty.");
+                return;
+            }
+
+            let ageInput = prompt("Enter your age:");
+            let age = parseInt(ageInput);
+
+            if (isNaN(age) || age <= 0) {
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            let eligibility = age >= 18 ? "Eligible to Vote" : "Not Eligible to Vote";
+            let eligibilityClass = age >= 18 ? "eligible" : "not-eligible";
+
+            document.getElementById("voterInfo").innerHTML = `
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Eligibility</th>
+                    </tr>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${age}</td>
+                        <td class="${eligibilityClass}">${eligibility}</td>
+                    </tr>
+                </table>
+            `;
+        }
+    </script>
+
+</body>
+</html>

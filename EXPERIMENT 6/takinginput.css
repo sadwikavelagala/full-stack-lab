@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Different Ways to Take Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        input, textarea, select, button {
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            min-height: 40px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Different Ways to Take Input in JavaScript</h1>
+
+<!-- 1. Prompt box -->
+<button onclick="takeInputPrompt()">1. Prompt Box</button><br>
+
+<!-- 2. Text input -->
+<label for="textInput">2. Text Input:</label><br>
+<input type="text" id="textInput" placeholder="Type your name" />
+<button onclick="takeInputText()">Submit</button><br>
+
+<!-- 3. Textarea -->
+<label for="textareaInput">3. Textarea:</label><br>
+<textarea id="textareaInput" rows="3" cols="30" placeholder="Type your message"></textarea><br>
+<button onclick="takeInputTextarea()">Submit</button><br>
+
+<!-- 4. Select dropdown -->
+<label for="selectInput">4. Select Dropdown:</label><br>
+<select id="selectInput">
+    <option value="">--Choose an option--</option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+</select>
+<button onclick="takeInputSelect()">Submit</button>
+
+<div id="output">Your input will appear here.</div>
+
+<script>
+    function takeInputPrompt() {
+        const userInput = prompt("Enter your name:");
+        if(userInput) {
+            document.getElementById("output").innerText = "Prompt input: " + userInput;
+        } else {
+            document.getElementById("output").innerText = "No input entered in prompt.";
+        }
+    }
+
+    function takeInputText() {
+        const userInput = document.getElementById("textInput").value;
+        if(userInput.trim() !== "") {
+            document.getElementById("output").innerText = "Text input: " + userInput;
+        } else {
+            document.getElementById("output").innerText = "Please enter some text.";
+        }
+    }
+
+    function takeInputTextarea() {
+        const userInput = document.getElementById("textareaInput").value;
+        if(userInput.trim() !== "") {
+            document.getElementById("output").innerText = "Textarea input: " + userInput;
+        } else {
+            document.getElementById("output").innerText = "Please enter some message.";
+        }
+    }
+
+    function takeInputSelect() {
+        const userInput = document.getElementById("selectInput").value;
+        if(userInput !== "") {
+            document.getElementById("output").innerText = "Selected option: " + userInput;
+        } else {
+            document.getElementById("output").innerText = "Please select an option.";
+        }
+    }
+</script>
+
+</body>
+</html>

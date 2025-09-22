@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Different Ways to Display Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 40px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Different Ways to Display Output in JavaScript</h1>
+
+<button onclick="displayAlert()">1. Alert Box</button><br>
+<button onclick="displayDocumentWrite()">2. document.write()</button><br>
+<button onclick="displayConsole()">3. Console.log()</button><br>
+<button onclick="displayInnerHTML()">4. innerHTML</button><br>
+
+<div id="output">Output will appear here (for innerHTML method)</div>
+
+<script>
+    function displayAlert() {
+        alert("This is displayed using alert box!");
+    }
+
+    function displayDocumentWrite() {
+        // Warning: this will overwrite the entire page content
+        document.write("This output is displayed using document.write()");
+    }
+
+    function displayConsole() {
+        console.log("This output is displayed in the browser console.");
+        alert("Check your browser's console (F12 or right-click > Inspect > Console)");
+    }
+
+    function displayInnerHTML() {
+        document.getElementById("output").innerHTML = "This output is displayed using innerHTML.";
+    }
+</script>
+
+</body>
+</html>
