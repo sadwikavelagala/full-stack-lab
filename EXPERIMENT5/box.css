@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Box Model Example</title>
+    <style>
+        .box-model {
+            width: 300px;
+            /* Content area */
+            background-color: #f0f8ff;
+            /* Padding */
+            padding: 20px;
+            /* Border */
+            border: 5px solid #1e90ff;
+            /* Margin */
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* For labeling each area */
+        .content-label {
+            background-color: #d1e7ff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px dashed #6495ed;
+        }
+
+        .padding-label {
+            background-color: #b0d4ff;
+            margin: -20px 0 20px 0; /* Negative margin to position label inside padding */
+            padding: 5px;
+            border: 2px dotted #4169e1;
+        }
+
+        .border-label {
+            position: relative;
+            top: -40px;
+            background-color: #6495ed;
+            color: white;
+            padding: 5px 10px;
+            width: fit-content;
+            margin: 0 auto 20px auto;
+            border-radius: 3px;
+        }
+
+        .margin-label {
+            background-color: #e0f0ff;
+            padding: 10px;
+            width: 380px;
+            margin: 10px auto 0 auto;
+            border: 2px solid #87cefa;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">CSS Box Model Explained</h1>
+
+    <div class="margin-label">Margin (outside space)</div>
+
+    <div class="box-model">
+        <div class="border-label">Border (5px solid blue)</div>
+        <div class="padding-label">Padding (20px space inside border)</div>
+        <div class="content-label">
+            Content Area<br />
+            This is where your actual text or content goes.
+        </div>
+    </div>
+
+</body>
+</html>

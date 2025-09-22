@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Color Reference Examples</title>
+    <style>
+        /* Named color */
+        .named-color {
+            color: red;
+        }
+
+        /* Hexadecimal color */
+        .hex-color {
+            color: #1E90FF; /* DodgerBlue */
+        }
+
+        /* RGB color */
+        .rgb-color {
+            color: rgb(255, 165, 0); /* Orange */
+        }
+
+        /* RGBA color (with opacity) */
+        .rgba-color {
+            color: rgba(0, 128, 0, 0.7); /* Semi-transparent green */
+        }
+
+        /* HSL color */
+        .hsl-color {
+            color: hsl(300, 100%, 50%); /* Magenta */
+        }
+
+        /* HSLA color (with opacity) */
+        .hsla-color {
+            color: hsla(240, 100%, 50%, 0.5); /* Semi-transparent blue */
+        }
+
+        /* Background color using hex */
+        .bg-hex {
+            background-color: #ff6347; /* Tomato */
+            color: white;
+            padding: 5px;
+        }
+
+        /* Background color using named */
+        .bg-named {
+            background-color: lightgreen;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CSS Color Reference Examples</h2>
+
+    <p class="named-color">This text uses a <strong>named color</strong> (red).</p>
+    <p class="hex-color">This text uses a <strong>hexadecimal color</strong> (#1E90FF - DodgerBlue).</p>
+    <p class="rgb-color">This text uses an <strong>RGB color</strong> (rgb(255, 165, 0) - Orange).</p>
+    <p class="rgba-color">This text uses an <strong>RGBA color</strong> with opacity (rgba(0,128,0,0.7) - semi-transparent green).</p>
+    <p class="hsl-color">This text uses an <strong>HSL color</strong> (hsl(300, 100%, 50%) - Magenta).</p>
+    <p class="hsla-color">This text uses an <strong>HSLA color</strong> with opacity (hsla(240, 100%, 50%, 0.5) - semi-transparent blue).</p>
+
+    <p class="bg-hex">This paragraph has a <strong>hex background color</strong> (#ff6347 - Tomato).</p>
+    <p class="bg-named">This paragraph has a <strong>named background color</strong> (lightgreen).</p>
+
+</body>
+</html>

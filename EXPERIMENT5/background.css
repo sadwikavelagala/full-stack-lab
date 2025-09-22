@@ -1,0 +1,35 @@
+body {
+    /* Background image */
+    background-image: url('your-image.jpg');
+
+    /* Position halfway down the page horizontally centered */
+    background-position: center 50%;
+
+    /* Fix background so it doesn't scroll */
+    background-attachment: fixed;
+
+    /* Make sure background doesn't repeat */
+    background-repeat: no-repeat;
+
+    /* Size of the background image */
+    background-size: auto;
+
+    /* Apply horizontal tilt using transform on a pseudo-element */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;  /* set width of image */
+    height: 200px; /* set height of image */
+    background-image: url('your-image.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%) rotate(15deg); /* tilt horizontally by 15 degrees */
+    pointer-events: none; /* so it doesn't interfere with clicks */
+    z-index: -1;
+}

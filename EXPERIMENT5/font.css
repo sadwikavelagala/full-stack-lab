@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Font and Text Properties Example</title>
+    <style>
+        /* font-size */
+        .font-size {
+            font-size: 24px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* font-weight */
+        .font-weight {
+            font-weight: bold;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* font-style */
+        .font-style {
+            font-style: italic;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* text-decoration */
+        .text-decoration {
+            text-decoration: underline;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* text-transform */
+        .text-transform {
+            text-transform: uppercase;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* text-align */
+        .text-align {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Font and Text Properties</h1>
+
+    <p class="font-size">This text uses <strong>font-size</strong>: 24px.</p>
+    <p class="font-weight">This text uses <strong>font-weight</strong>: bold.</p>
+    <p class="font-style">This text uses <strong>font-style</strong>: italic.</p>
+    <p class="text-decoration">This text uses <strong>text-decoration</strong>: underline.</p>
+    <p class="text-transform">This text uses <strong>text-transform</strong>: uppercase.</p>
+    <p class="text-align">This text uses <strong>text-align</strong>: center.</p>
+
+</body>
+</html>
