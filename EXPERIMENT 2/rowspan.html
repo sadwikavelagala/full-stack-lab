@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Timetable Example</title>
+    <style>
+        table {
+            border-collapse: separate; /* important for cellspacing to work */
+            border-spacing: 10px; /* cellspacing */
+            margin: 30px auto;
+            width: 80%;
+            border: 3px solid #333;
+            font-family: Arial, sans-serif;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 2px solid #555;
+            padding: 12px 20px; /* cellpadding */
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <table cellspacing="10" cellpadding="12" border="3">
+        <caption>Weekly Class Timetable</caption>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>9:00 - 10:00</td>
+            <td rowspan="2">Mathematics</td>
+            <td>Physics</td>
+            <td>Biology</td>
+            <td>History</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <!-- Mathematics rowspan covers this cell -->
+            <td>Chemistry</td>
+            <td>Geography</td>
+            <td>Physics</td>
+            <td>Art</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td>English</td>
+            <td colspan="2">Computer Science</td>
+            <td>Physical Education</td>
+            <td>Music</td>
+        </tr>
+        <tr>
+            <td>12:00 - 1:00</td>
+            <td>Lunch Break</td>
+            <td>Lunch Break</td>
+            <td>Lunch Break</td>
+            <td>Lunch Break</td>
+            <td>Lunch Break</td>
+        </tr>
+        <tr>
+            <td>1:00 - 2:00</td>
+            <td>History</td>
+            <td>Mathematics</td>
+            <td>Physics</td>
+            <td rowspan="2">Group Project</td>
+            <td>Biology</td>
+        </tr>
+        <tr>
+            <td>2:00 - 3:00</td>
+            <td>Geography</td>
+            <td>English</td>
+            <td>Art</td>
+            <!-- Group Project rowspan covers this cell -->
+            <td>Physical Education</td>
+        </tr>
+    </table>
+
+</body>
+</html>

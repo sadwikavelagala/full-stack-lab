@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frames Example - All in One</title>
+</head>
+<frameset rows="33%,34%,33%" border="2" frameborder="1" framespacing="5" noresize>
+    <!-- Frame 1: Image -->
+    <frame src="data:text/html,
+        <html><body style='margin:0; padding:0; text-align:center;'>
+        <img src='https://via.placeholder.com/300x150' alt='Sample Image' style='max-width:100%; height:auto;'>
+        </body></html>" name="frame1" noresize>
+
+    <!-- Frame 2: Paragraph -->
+    <frame src="data:text/html,
+        <html><body style='font-family:Arial,sans-serif; padding:20px;'>
+        <p>This is a sample paragraph inside the second frame. It explains the usage of frames in HTML.</p>
+        </body></html>" name="frame2" noresize>
+
+    <!-- Frame 3: Hyperlink -->
+    <frame src="data:text/html,
+        <html><body style='padding:20px; font-family:Arial,sans-serif;'>
+        <a href='https://www.example.com' target='_blank'>Visit Example.com</a>
+        </body></html>" name="frame3" noresize>
+
+    <noframes>
+        <body>Your browser does not support frames.</body>
+    </noframes>
+</frameset>
+</html>

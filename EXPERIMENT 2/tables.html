@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 2px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Working of HTML Tables</h1>
+
+    <p style="width:70%; margin:auto;">
+        This table demonstrates the use of <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> tags along with the <code>border</code>, <code>rowspan</code>, and <code>colspan</code> attributes.
+    </p>
+
+    <table border="2">
+        <tr>
+            <th>Month</th>
+            <th colspan="2">Sales Data</th>
+            <th>Remarks</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Online</th>
+            <th>Offline</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td rowspan="2">January</td>
+            <td>5000</td>
+            <td>3000</td>
+            <td rowspan="2">Good Performance</td>
+        </tr>
+        <tr>
+            <td>5500</td>
+            <td>3200</td>
+        </tr>
+        <tr>
+            <td>February</td>
+            <td colspan="2">15000 (Combined)</td>
+            <td>Excellent</td>
+        </tr>
+    </table>
+
+    <p style="width:70%; margin:auto; margin-top:20px;">
+        <strong>Explanation:</strong><br>
+        - <code>border="2"</code> adds borders around the table and cells.<br>
+        - <code>colspan="2"</code> makes a cell span across two columns.<br>
+        - <code>rowspan="2"</code> makes a cell span down two rows.<br>
+        - The table header cells (<code>&lt;th&gt;</code>) are bold and centered.<br>
+    </p>
+</body>
+</html>
