@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Thumbnail Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .gallery a img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+        .gallery a img:hover {
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery with Thumbnails</h1>
+    <p>Click on any thumbnail to view the full-sized image.</p>
+
+    <div class="gallery">
+        <a href="https://via.placeholder.com/600" target="_blank" title="Image 1">
+            <img src="https://via.placeholder.com/100" alt="Thumbnail 1" />
+        </a>
+        <a href="https://via.placeholder.com/601" target="_blank" title="Image 2">
+            <img src="https://via.placeholder.com/101" alt="Thumbnail 2" />
+        </a>
+        <a href="https://via.placeholder.com/602" target="_blank" title="Image 3">
+            <img src="https://via.placeholder.com/102" alt="Thumbnail 3" />
+        </a>
+        <a href="https://via.placeholder.com/603" target="_blank" title="Image 4">
+            <img src="https://via.placeholder.com/103" alt="Thumbnail 4" />
+        </a>
+        <a href="https://via.placeholder.com/604" target="_blank" title="Image 5">
+            <img src="https://via.placeholder.com/104" alt="Thumbnail 5" />
+        </a>
+    </div>
+</body>
+</html>
