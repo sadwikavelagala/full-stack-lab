@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Selector Types Example</title>
+    <style>
+        /* i. Simple selectors */
+
+        /* Element selector */
+        p {
+            color: navy;
+        }
+
+        /* ID selector */
+        #special {
+            color: darkred;
+            font-weight: bold;
+        }
+
+        /* Class selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Group selector (p and h2) */
+        p, h2 {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* ii. Combinator selectors */
+
+        /* Descendant selector: p inside div */
+        div p {
+            font-style: italic;
+        }
+
+        /* Child selector: only direct p children of div */
+        div > p {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        /* Adjacent sibling selector: p immediately after h2 */
+        h2 + p {
+            color: green;
+        }
+
+        /* General sibling selector: all p siblings after h2 */
+        h2 ~ p {
+            margin-left: 20px;
+        }
+
+
+        /* iii. Pseudo-class selector */
+
+        /* Hover on links */
+        a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* First child of its parent */
+        p:first-child {
+            font-weight: bold;
+        }
+
+
+        /* iv. Pseudo-element selector */
+
+        /* Add quotation marks before blockquote content */
+        blockquote::before {
+            content: "“";
+            font-size: 2em;
+            color: gray;
+            vertical-align: top;
+            margin-right: 5px;
+        }
+
+        /* Style first letter of paragraphs */
+        p::first-letter {
+            font-size: 150%;
+            color: purple;
+            font-weight: bold;
+        }
+
+
+        /* v. Attribute selector */
+
+        /* Select all links with target="_blank" */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* Select inputs with type="text" */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Selectors</h2>
+    <p>This paragraph uses an <code>element selector</code>.</p>
+    <p id="special">This paragraph uses an <code>id selector</code> (#special).</p>
+    <p class="highlight">This paragraph uses a <code>class selector</code> (.highlight).</p>
+
+    <h2>Combinator Selectors</h2>
+    <div>
+        <p>This paragraph is a <code>descendant</code> of a div.</p>
+        <p>This paragraph is a <code>child</code> of a div.</p>
+    </div>
+    <h2>Adjacent sibling selector example</h2>
+    <p>This paragraph immediately follows the previous &lt;h2&gt;.</p>
+    <p>This paragraph is a general sibling of the &lt;h2&gt; above.</p>
+
+    <h2>Pseudo-class Selectors</h2>
+    <a href="#" target="_blank">Hover over me (link with target="_blank")</a><br />
+    <a href="#">Hover over me (normal link)</a>
+    <p>First paragraph in this section.</p>
+    <p>Second paragraph in this section.</p>
+
+    <h2>Pseudo-element Selectors</h2>
+    <blockquote>This is a blockquote with a pseudo-element before it.</blockquote>
+    <p>This paragraph's first letter is styled.</p>
+
+    <h2>Attribute Selectors</h2>
+    <a href="https://example.com" target="_blank">Link with target="_blank" (red color)</a><br />
+    <a href="https://example.com">Normal link</a><br />
+    <input type="text" placeholder="Text input with border" />
+    <input type="password" placeholder="Password input without border" />
+
+</body>
+</html>
