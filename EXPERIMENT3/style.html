@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Inline, Internal, External CSS Example</title>
+
+    <!-- Simulated External CSS -->
+    <style>
+        /* External CSS */
+        /* Selector: h2 */
+        /* Property: color */
+        /* Value: green */
+        h2 {
+            color: green;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Selector: p */
+        /* Property: font-size */
+        /* Value: 18px */
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS */
+        /* Selector: .internal-style */
+        /* Property: background-color */
+        /* Value: lightyellow */
+        .internal-style {
+            background-color: lightyellow;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: blue; font-family: Verdana, sans-serif;">
+        Inline Styled Heading
+    </h1>
+
+    <h2>External Styled Heading (simulated)</h2>
+
+    <p class="internal-style">
+        This paragraph uses internal CSS for background color and external CSS for font size and color.
+    </p>
+
+    <p style="color: red; font-weight: bold;">
+        This paragraph uses inline styles for color and font-weight.
+    </p>
+
+</body>
+</html>

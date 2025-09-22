@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Semantic Tags Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 30px;
+        }
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        article {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        aside {
+            flex: 1;
+            background: #e7e7e7;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        figure {
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            color: #555;
+            margin-top: 6px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .footer-text span {
+            font-weight: bold;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to the sample page using semantic HTML5 tags.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <article>
+            <header>
+                <h2>The Beauty of Nature</h2>
+                <p><small>By Jane Doe | Published on Sep 22, 2025</small></p>
+            </header>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x300" alt="Scenic mountain landscape" width="600" />
+                <figcaption>Mountain sunrise captured during the summer hike.</figcaption>
+            </figure>
+
+            <section>
+                <p>Nature is a source of endless wonder and inspiration. The <span class="highlight">mountains</span>, rivers, and forests offer a serene escape from everyday life.</p>
+            </section>
+
+            <section>
+                <h3>Why We Should Protect Nature</h3>
+                <p>Protecting natural habitats preserves biodiversity and ensures that future generations can enjoy the beauty and benefits of our planet.</p>
+            </section>
+
+            <footer>
+                <p>Tags: <span>Nature</span>, <span>Environment</span>, <span>Conservation</span></p>
+            </footer>
+        </article>
+
+        <aside>
+            <h3>Related Links</h3>
+            <ul>
+                <li><a href="#">National Parks</a></li>
+                <li><a href="#">Wildlife Conservation</a></li>
+                <li><a href="#">Sustainable Living Tips</a></li>
+            </ul>
+
+            <div>
+                <h4>Did You Know?</h4>
+                <p>The Amazon rainforest produces 20% of the world's oxygen!</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer-text">
+        <p>&copy; 2025 My Website. All rights reserved. <span>Contact us:</span> info@mywebsite.com</p>
+    </footer>
+
+</body>
+</html>
