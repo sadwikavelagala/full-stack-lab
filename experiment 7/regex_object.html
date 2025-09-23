@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RegExp Object Example</title>
+</head>
+<body>
+  <button onclick="testRegex()">Test Regular Expression</button>
+
+  <script>
+    function testRegex() {
+      let pattern = /hello/;
+      let str = "hello world";
+      console.log("Pattern matches: " + pattern.test(str));
+      console.log("Matched text: " + pattern.exec(str));
+    }
+  </script>
+</body>
+</html>

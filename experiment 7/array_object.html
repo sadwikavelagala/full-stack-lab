@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Object Example</title>
+</head>
+<body>
+  <button onclick="manipulateArray()">Manipulate Array</button>
+
+  <script>
+    function manipulateArray() {
+      let fruits = ["apple", "banana", "cherry"];
+      fruits.push("orange");
+      fruits.unshift("grape");
+      fruits.pop();
+      fruits.shift();
+      console.log(fruits);
+    }
+  </script>
+</body>
+</html>

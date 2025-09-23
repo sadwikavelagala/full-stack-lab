@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User-defined Object Example</title>
+</head>
+<body>
+  <button onclick="createPerson()">Create Person</button>
+
+  <script>
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.getName = function() {
+        return this.name;
+      };
+      this.setAge = function(newAge) {
+        if (newAge > 0) {
+          this.age = newAge;
+        } else {
+          console.log("Age must be positive");
+        }
+      };
+      this.displayDetails = function() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+      };
+    }
+
+    function createPerson() {
+      let person1 = new Person("John", 25);
+      person1.displayDetails();
+    }
+  </script>
+</body>
+</html>
