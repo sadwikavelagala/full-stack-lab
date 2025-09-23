@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Denomination Breakdown</title>
+</head>
+<body>
+  <button onclick="breakdownAmount()">Enter Amount</button>
+  <div id="denominationResult"></div>
+
+  <script>
+    function breakdownAmount() {
+      let amount = parseInt(prompt("Enter the deposited amount:"));
+      let denominations = [100, 50, 20, 10, 5, 2, 1];
+      let result = [];
+
+      for(let denom of denominations) {
+        let count = Math.floor(amount / denom);
+        if(count > 0) {
+          result.push(`${count} - ${denom}'s`);
+          amount = amount % denom;
+        }
+      }
+
+      document.getElementById("denominationResult").textContent = result.join(", ");
+    }
+  </script>
+</body>
+</html>
+ 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Object Loops</title>
+</head>
+<body>
+  <button onclick="printObjectData()">Print Object Data</button>
+  <div id="forInLoop"></div>
+  <div id="forEachLoop"></div>
+  <div id="forOfLoop"></div>
+
+  <script>
+    function printObjectData() {
+      const obj = {name: "Alice", age: 30, city: "New York"};
+      let forInOutput = "";
+      for (let key in obj) {
+        forInOutput += key + ": " + obj[key] + "; ";
+      }
+      document.getElementById("forInLoop").textContent = "For-in loop: " + forInOutput;
+
+      const arr = Object.entries(obj);
+      let forEachOutput = "";
+      arr.forEach(([key, value]) => {
+        forEachOutput += key + ": " + value + "; ";
+      });
+      document.getElementById("forEachLoop").textContent = "forEach loop: " + forEachOutput;
+
+      let forOfOutput = "";
+      for (let [key, value] of arr) {
+        forOfOutput += key + ": " + value + "; ";
+      }
+      document.getElementById("forOfLoop").textContent = "For-of loop: " + forOfOutput;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Validation</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="regForm" onsubmit="return validateForm()">
+    <label>Name: </label>
+    <input type="text" id="name" required /><br /><br />
+
+    <label>Mobile: </label>
+    <input type="text" id="mobile" required /><br /><br />
+
+    <label>Email: </label>
+    <input type="email" id="email" required /><br /><br />
+
+    <input type="submit" value="Register" />
+  </form>
+
+  <div id="errorMessages" style="color:red;"></div>
+
+  <script>
+    function validateForm() {
+      let errors = [];
+      let name = document.getElementById('name').value.trim();
+      let mobile = document.getElementById('mobile').value.trim();
+      let email = document.getElementById('email').value.trim();
+
+      let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      if (!nameRegex.test(name)) errors.push('Name must start with a letter and be at least 6 characters long, with alphanumeric characters.');
+
+      let mobileRegex = /^[0-9]{10}$/;
+      if (!mobileRegex.test(mobile)) errors.push('Mobile must be exactly 10 digits.');
+
+      let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) errors.push('Invalid email format.');
+
+      let errorDiv = document.getElementById('errorMessages');
+      if (errors.length > 0) {
+        errorDiv.innerHTML = errors.join('<br>');
+        return false;
+      }
+      alert('Registration successful!');
+      errorDiv.innerHTML = '';
+      return true;
+    }
+  </script>
+</body>
+</html>
